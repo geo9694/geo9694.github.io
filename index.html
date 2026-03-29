@@ -1,330 +1,772 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Souk Grip Socks | Pilates & Yoga Essentials</title>
+    <title>SOUK Grip Socks | Moroccan Pilates & Yoga Essentials</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #3d3229;
-            background: #faf8f5;
+
+        :root {
+            --terracotta: #C65D3B;
+            --ocean: #2E5C6E;
+            --sand: #E6D5C3;
+            --charcoal: #2C2C2C;
+            --cream: #F5F1E8;
+            --gold: #D4A574;
         }
-        
-        /* 顶部导航 */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        /* 导航栏 */
         nav {
-            background: #fff;
-            padding: 20px 40px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(245, 241, 232, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #e8e4df;
+            z-index: 1000;
+            border-bottom: 1px solid var(--sand);
         }
-        
+
         .logo {
-            font-size: 1.8em;
-            font-weight: 300;
-            letter-spacing: 3px;
-            color: #8b6914;
-        }
-        
-        .tagline {
-            font-size: 0.9em;
-            color: #9a8b7a;
-            font-style: italic;
-        }
-        
-        /* 主视觉区 */
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #faf8f5 0%, #f0ebe3 100%);
-        }
-        
-        .hero h1 {
-            font-size: 2.5em;
-            font-weight: 300;
-            margin-bottom: 15px;
-            color: #5d4e37;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--terracotta);
             letter-spacing: 2px;
         }
-        
-        .hero p {
-            font-size: 1.1em;
-            color: #8b7355;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-        
-        /* 中东风格装饰图案 */
-        .pattern-divider {
-            width: 200px;
-            height: 40px;
-            margin: 30px auto;
-            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L40 20L20 40L0 20L20 0z' fill='none' stroke='%23c9a227' stroke-width='1'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23c9a227'/%3E%3C/svg%3E");
-            opacity: 0.6;
-        }
-        
-        /* 产品展示区 */
-        .product-section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .product-image {
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        
-        .product-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
-        }
-        
-        .product-info h2 {
-            font-size: 2em;
-            font-weight: 300;
-            margin-bottom: 20px;
-            color: #5d4e37;
-        }
-        
-        .price {
-            font-size: 1.8em;
-            color: #c9a227;
-            font-weight: 500;
-            margin: 20px 0;
-        }
-        
-        .features {
-            list-style: none;
-            margin: 30px 0;
-        }
-        
-        .features li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            color: #6b5b4f;
-        }
-        
-        .features li:before {
-            content: "◆";
-            position: absolute;
-            left: 0;
-            color: #c9a227;
-        }
-        
-        /* 中东风格颜色选项 */
-        .colors {
-            margin: 25px 0;
-        }
-        
-        .colors h4 {
-            font-weight: 400;
-            margin-bottom: 12px;
-            color: #8b7355;
-        }
-        
-        .color-options {
+
+        .nav-links {
             display: flex;
-            gap: 12px;
+            gap: 2rem;
+            list-style: none;
         }
-        
-        .color-dot {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            text-align: center;
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--sand) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--ocean);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 系列标签 */
+        .collection-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 2rem;
+            border: 2px solid var(--terracotta);
+            background: transparent;
+            color: var(--terracotta);
             cursor: pointer;
-            border: 2px solid transparent;
+            border-radius: 30px;
+            font-weight: 600;
             transition: all 0.3s;
         }
-        
-        .color-dot:hover {
-            border-color: #5d4e37;
-            transform: scale(1.1);
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--terracotta);
+            color: white;
         }
-        
-        .color-desert { background: #d4a574; }
-        .color-terracotta { background: #c67b5c; }
-        .color-sand { background: #e6d5b8; }
-        .color-moroccan { background: #8b4513; }
-        
-        /* CTA按钮 */
-        .cta {
-            background: #5d4e37;
-            color: #fff;
-            padding: 16px 40px;
-            border: none;
-            border-radius: 4px;
-            font-size: 1em;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .cta:hover {
-            background: #8b6914;
-        }
-        
-        /* 产品特点区 */
-        .highlights {
+
+        /* 产品网格 */
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-        
-        .highlight {
-            padding: 30px;
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
-        
-        .highlight-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 20px;
-            background: #f0ebe3;
-            border-radius: 50%;
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, var(--sand), var(--cream));
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5em;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
         }
-        
-        .highlight h3 {
-            font-weight: 400;
-            margin-bottom: 10px;
-            color: #5d4e37;
+
+        .product-image::before {
+            content: attr(data-emoji);
         }
-        
-        .highlight p {
-            color: #8b7355;
-            font-size: 0.95em;
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--terracotta);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
-        
-        /* 页脚 */
-        footer {
-            background: #5d4e37;
-            color: #d4c4b0;
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-series {
+            color: var(--ocean);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            color: var(--terracotta);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .product-features {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .feature-tag {
+            background: var(--cream);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--charcoal);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 80px;
-        }
-        
-        footer a {
-            color: #c9a227;
             text-decoration: none;
         }
-        
-        /* 移动端适配 */
+
+        .btn-primary {
+            background: var(--terracotta);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #A84D2F;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--terracotta);
+            border: 2px solid var(--terracotta);
+        }
+
+        .btn-secondary:hover {
+            background: var(--terracotta);
+            color: white;
+        }
+
+        /* 详情页模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            animation: slideUp 0.3s;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .modal-image {
+            background: linear-gradient(45deg, var(--sand), var(--cream));
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+
+        .modal-details {
+            padding: 3rem;
+            overflow-y: auto;
+            max-height: 600px;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .color-option.active {
+            border-color: var(--charcoal);
+            transform: scale(1.1);
+        }
+
+        .size-selector {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .size-btn {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--sand);
+            background: white;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .size-btn.active,
+        .size-btn:hover {
+            border-color: var(--terracotta);
+            color: var(--terracotta);
+        }
+
+        .detail-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--sand);
+        }
+
+        .detail-section h3 {
+            color: var(--ocean);
+            margin-bottom: 1rem;
+        }
+
+        .specs-list {
+            list-style: none;
+        }
+
+        .specs-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .specs-list li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: var(--terracotta);
+        }
+
+        /* 响应式 */
         @media (max-width: 768px) {
-            .product-grid {
+            .modal-body {
                 grid-template-columns: 1fr;
             }
-            .highlights {
-                grid-template-columns: 1fr;
+            .modal-image {
+                min-height: 300px;
             }
             .hero h1 {
-                font-size: 1.8em;
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- 导航 -->
     <nav>
         <div class="logo">SOUK</div>
-        <div class="tagline">Moroccan-inspired grip socks</div>
+        <ul class="nav-links">
+            <li><a href="#collections">系列</a></li>
+            <li><a href="#about">品牌故事</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
     </nav>
 
+    <!-- Hero -->
     <section class="hero">
         <h1>Where Tradition Meets Movement</h1>
         <p>Authentic Moroccan patterns meet modern Pilates performance. Non-slip grip socks inspired by centuries of artisan craft.</p>
-        <div class="pattern-divider"></div>
     </section>
 
-    <section class="product-section">
-        <div class="product-grid">
-            <div class="product-image">
-                <!-- 替换为你的产品图片 -->
-                <img src="socks-moroccan.jpg.png" alt="Moroccan Pattern Grip Socks">
+    <!-- 系列标签 -->
+    <div class="collection-tabs">
+        <button class="tab-btn active" onclick="filterCollection('all')">全部系列</button>
+        <button class="tab-btn" onclick="filterCollection('zellige')">Zellige Collection</button>
+        <button class="tab-btn" onclick="filterCollection('medina')">Medina Collection</button>
+        <button class="tab-btn" onclick="filterCollection('limited')">Limited Edition</button>
+    </div>
+
+    <!-- 产品网格 -->
+    <div class="products-grid" id="productsGrid">
+        
+        <!-- Zellige Collection - Desert Tones（现有） -->
+        <div class="product-card" data-collection="zellige" onclick="openModal('desert')">
+            <div class="product-image" data-emoji="🧦">
+                <span class="product-badge">畅销</span>
             </div>
-            
             <div class="product-info">
-                <h2>Zellige Collection</h2>
-                <p>Inspired by traditional Moroccan tilework, featuring geometric patterns that tell stories of Marrakech medinas.</p>
-                
-                <ul class="features">
-                    <li>Premium organic cotton blend</li>
-                    <li>Strategic silicone grip pattern</li>
-                    <li>Arch compression support</li>
-                    <li>Reinforced toe & heel</li>
-                    <li>One size fits most (US 6-10)</li>
-                </ul>
-                
-                <div class="colors">
-                    <h4>Desert Tones</h4>
-                    <div class="color-options">
-                        <div class="color-dot color-desert" title="Sahara Sand"></div>
-                        <div class="color-dot color-terracotta" title="Marrakech Clay"></div>
-                        <div class="color-dot color-sand" title="Casablanca Cream"></div>
-                        <div class="color-dot color-moroccan" title="Fez Bronze"></div>
+                <div class="product-series">Zellige Collection</div>
+                <h3 class="product-name">Desert Tones</h3>
+                <div class="product-price">$18.00</div>
+                <div class="product-features">
+                    <span class="feature-tag">有机棉</span>
+                    <span class="feature-tag">硅胶防滑</span>
+                    <span class="feature-tag">足弓支撑</span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">查看详情</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zellige Collection - Ocean Blue（新增） -->
+        <div class="product-card" data-collection="zellige" onclick="openModal('ocean')">
+            <div class="product-image" data-emoji="🌊" style="background: linear-gradient(45deg, #E8F4F8, #B8D4E3);">
+            </div>
+            <div class="product-info">
+                <div class="product-series">Zellige Collection</div>
+                <h3 class="product-name">Ocean Blue</h3>
+                <div class="product-price">$18.00</div>
+                <div class="product-features">
+                    <span class="feature-tag">海洋灵感</span>
+                    <span class="feature-tag">透气网眼</span>
+                    <span class="feature-tag">快干面料</span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">查看详情</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zellige Collection - Terracotta Sunset（新增） -->
+        <div class="product-card" data-collection="zellige" onclick="openModal('terracotta')">
+            <div class="product-image" data-emoji="🌅" style="background: linear-gradient(45deg, #F4A261, #E76F51);">
+                <span class="product-badge">新品</span>
+            </div>
+            <div class="product-info">
+                <div class="product-series">Zellige Collection</div>
+                <h3 class="product-name">Terracotta Sunset</h3>
+                <div class="product-price">$20.00</div>
+                <div class="product-features">
+                    <span class="feature-tag">日落渐变</span>
+                    <span class="feature-tag">加厚缓冲</span>
+                    <span class="feature-tag">限量色</span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">查看详情</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zellige Collection - Midnight Marrakech（新增） -->
+        <div class="product-card" data-collection="zellige" onclick="openModal('midnight')">
+            <div class="product-image" data-emoji="🌙" style="background: linear-gradient(45deg, #2C3E50, #34495E);">
+            </div>
+            <div class="product-info">
+                <div class="product-series">Zellige Collection</div>
+                <h3 class="product-name">Midnight Marrakech</h3>
+                <div class="product-price">$18.00</div>
+                <div class="product-features">
+                    <span class="feature-tag">深色调</span>
+                    <span class="feature-tag">耐脏</span>
+                    <span class="feature-tag">夜间反光</span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">查看详情</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medina Collection - Souk Spice（新系列） -->
+        <div class="product-card" data-collection="medina" onclick="openModal('spice')">
+            <div class="product-image" data-emoji="🌶️" style="background: linear-gradient(45deg, #D4A574, #C65D3B);">
+                <span class="product-badge">新系列</span>
+            </div>
+            <div class="product-info">
+                <div class="product-series">Medina Collection</div>
+                <h3 class="product-name">Souk Spice</h3>
+                <div class="product-price">$22.00</div>
+                <div class="product-features">
+                    <span class="feature-tag">香料市场</span>
+                    <span class="feature-tag">抗菌面料</span>
+                    <span class="feature-tag">奢华系列</span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">查看详情</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medina Collection - Atlas Mountain（新系列） -->
+        <div class="product-card" data-collection="medina" onclick="openModal('atlas')">
+            <div class="product-image" data-emoji">⛰️" style="background: linear-gradient(45deg, #A8B5A0, #8B9D83);">
+            </div>
+            <div class="product-info">
+                <div class="product-series">Medina Collection</div>
+                <h3 class="product-name">Atlas Mountain</h3>
+                <div class="product-price">$22.00</div>
+                <div class="product-features">
+                    <span class="feature-tag">山脉灵感</span>
+                    <span class="feature-tag">保暖内里</span>
+                    <span class="feature-tag">冬季款</span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">查看详情</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Limited Edition - Artisan Collaboration（限量） -->
+        <div class="product-card" data-collection="limited" onclick="openModal('artisan')">
+            <div class="product-image" data-emoji="✨" style="background: linear-gradient(45deg, #F9F1F0, #E6B8B8, #D4A5A5);">
+                <span class="product-badge">限量 50双</span>
+            </div>
+            <div class="product-info">
+                <div class="product-series">Limited Edition</div>
+                <h3 class="product-name">Artisan Collaboration</h3>
+                <div class="product-price">$35.00</div>
+                <div class="product-features">
+                    <span class="feature-tag">手工刺绣</span>
+                    <span class="feature-tag">编号证书</span>
+                    <span class="feature-tag">艺术家联名</span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">查看详情</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 产品详情模态框 -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <div class="modal-body">
+                <div class="modal-image" id="modalImage">🧦</div>
+                <div class="modal-details">
+                    <div class="product-series" id="modalSeries">Zellige Collection</div>
+                    <h2 id="modalName">Desert Tones</h2>
+                    <div class="product-price" id="modalPrice">$18.00</div>
+                    
+                    <p id="modalDesc">灵感来自马拉喀什传统瓷砖工艺的几何图案，讲述着古老 Medina 的故事。</p>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <strong>选择颜色：</strong>
+                        <div class="color-options" id="colorOptions">
+                            <div class="color-option active" style="background: #C65D3B;" title="Terracotta"></div>
+                            <div class="color-option" style="background: #2E5C6E;" title="Ocean"></div>
+                            <div class="color-option" style="background: #E6D5C3;" title="Sand"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin: 1.5rem 0;">
+                        <strong>选择尺码：</strong>
+                        <div class="size-selector">
+                            <button class="size-btn">S</button>
+                            <button class="size-btn active">M</button>
+                            <button class="size-btn">L</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">
+                        咨询购买
+                    </button>
+
+                    <div class="detail-section">
+                        <h3>产品特点</h3>
+                        <ul class="specs-list" id="modalSpecs">
+                            <li>优质有机棉混纺面料</li>
+                            <li>战略性硅胶防滑图案</li>
+                            <li>足弓压缩支撑设计</li>
+                            <li>加固脚趾和后跟</li>
+                            <li>均码适合 US 6-10</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>护理说明</h3>
+                        <p>冷水机洗，低温烘干。为保持防滑性能，建议翻面洗涤。</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>配送信息</h3>
+                        <p>✓ 3双以上免费 shipping<br>
+                        ✓ 14天无理由退换<br>
+                        ✓ 全球配送</p>
                     </div>
                 </div>
-                
-                <div class="price">$18.00</div>
-                <a href="mailto:303136997@qq.com" class="cta">Inquire to Purchase</a>
-                <p style="margin-top:15px; font-size:0.9em; color:#8b7355;">✓ Free shipping on 3+ pairs</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="highlights">
-        <div class="highlight">
-            <div class="highlight-icon">✦</div>
-            <h3>Authentic Patterns</h3>
-            <p>Each design draws from traditional Moroccan zellige tile geometry</p>
-        </div>
-        <div class="highlight">
-            <div class="highlight-icon">◈</div>
-            <h3>Studio Performance</h3>
-            <p>Tested by Pilates instructors for maximum mat grip</p>
-        </div>
-        <div class="highlight">
-            <div class="highlight-icon">◉</div>
-            <h3>Ethical Craft</h3>
-            <p>Small-batch production with sustainable materials</p>
-        </div>
-    </section>
+    <script>
+        // 产品数据
+        const products = {
+            desert: {
+                series: 'Zellige Collection',
+                name: 'Desert Tones',
+                price: '$18.00',
+                emoji: '🧦',
+                bg: 'linear-gradient(45deg, #E6D5C3, #F5F1E8)',
+                desc: '灵感来自马拉喀什传统瓷砖工艺的几何图案，讲述着古老 Medina 的故事。温暖的大地色调，适合日常练习。',
+                specs: ['优质有机棉混纺面料', '战略性硅胶防滑图案', '足弓压缩支撑设计', '加固脚趾和后跟', '均码适合 US 6-10']
+            },
+            ocean: {
+                series: 'Zellige Collection',
+                name: 'Ocean Blue',
+                price: '$18.00',
+                emoji: '🌊',
+                bg: 'linear-gradient(45deg, #E8F4F8, #B8D4E3)',
+                desc: '大西洋海岸的清新灵感。采用透气网眼设计，高温瑜伽课程的理想选择。',
+                specs: ['海洋蓝渐变色调', '透气网眼编织', '快干吸湿面料', '加强透气区域', '适合热瑜伽']
+            },
+            terracotta: {
+                series: 'Zellige Collection',
+                name: 'Terracotta Sunset',
+                price: '$20.00',
+                emoji: '🌅',
+                bg: 'linear-gradient(45deg, #F4A261, #E76F51)',
+                desc: '捕捉撒哈拉日落的壮丽色彩。加厚缓冲底，为长时间练习提供额外舒适。',
+                specs: ['日落渐变配色', '加厚缓冲鞋底', '限量季节色', '额外后跟保护', '收藏级包装']
+            },
+            midnight: {
+                series: 'Zellige Collection',
+                name: 'Midnight Marrakech',
+                price: '$18.00',
+                emoji: '🌙',
+                bg: 'linear-gradient(45deg, #2C3E50, #34495E)',
+                desc: '深夜 Medina 的神秘魅力。深色调耐脏实用，夜间反光条增加安全性。',
+                specs: ['深靛蓝色调', '耐脏实用设计', '夜间反光条', '低调优雅风格', '适合晚间课程']
+            },
+            spice: {
+                series: 'Medina Collection',
+                name: 'Souk Spice',
+                price: '$22.00',
+                emoji: '🌶️',
+                bg: 'linear-gradient(45deg, #D4A574, #C65D3B)',
+                desc: '走进香料市场的温暖怀抱。奢华系列采用抗菌银离子面料，高端体验。',
+                specs: ['摩洛哥香料灵感', '抗菌银离子面料', '奢华加厚材质', '手工编织细节', '礼盒包装']
+            },
+            atlas: {
+                series: 'Medina Collection',
+                name: 'Atlas Mountain',
+                price: '$22.00',
+                emoji: '⛰️',
+                bg: 'linear-gradient(45deg, #A8B5A0, #8B9D83)',
+                desc: '阿特拉斯山脉的清新空气。保暖内里设计，冬季练习的完美伴侣。',
+                specs: ['山脉绿色调', '保暖抓绒内里', '冬季专用款', '防滑升级', '温度调节']
+            },
+            artisan: {
+                series: 'Limited Edition',
+                name: 'Artisan Collaboration',
+                price: '$35.00',
+                emoji: '✨',
+                bg: 'linear-gradient(45deg, #F9F1F0, #E6B8B8, #D4A5A5)',
+                desc: '与摩洛哥当地工匠的独家合作。每双都有独立编号和手工刺绣细节，附收藏证书。',
+                specs: ['手工刺绣细节', '独立编号证书', '艺术家签名', '限定 50 双', '丝绸内衬', '木质礼盒']
+            }
+        };
 
-    <footer>
-        <p>SOUK Grip Socks | Inspired by Marrakech, Made for Movement</p>
-        <p style="margin-top:10px;">📧 <a href="mailto:303136997@qq.com">303136997@qq.com</a></p>
-        <p style="margin-top:20px; font-size:0.85em; opacity:0.7;">© 2025 Souk Socks. All rights reserved.</p>
-    </footer>
+        // 打开模态框
+        function openModal(productId) {
+            const product = products[productId];
+            document.getElementById('modalSeries').textContent = product.series;
+            document.getElementById('modalName').textContent = product.name;
+            document.getElementById('modalPrice').textContent = product.price;
+            document.getElementById('modalDesc').textContent = product.desc;
+            document.getElementById('modalImage').textContent = product.emoji;
+            document.getElementById('modalImage').style.background = product.bg;
+            
+            const specsList = document.getElementById('modalSpecs');
+            specsList.innerHTML = product.specs.map(spec => `<li>${spec}</li>`).join('');
+            
+            document.getElementById('productModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            document.getElementById('productModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // 点击模态框外部关闭
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // ESC 键关闭
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // 系列筛选
+        function filterCollection(collection) {
+            // 更新按钮状态
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.includes(collection === 'all' ? '全部' : 
+                    collection === 'zellige' ? 'Zellige' : 
+                    collection === 'medina' ? 'Medina' : 'Limited')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // 筛选产品
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (collection === 'all' || card.dataset.collection === collection) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 颜色选择交互
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(o => o.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // 尺码选择交互
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
