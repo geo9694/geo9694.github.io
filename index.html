@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,7 @@
             line-height: 1.6;
         }
 
-        /* 导航栏 */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -53,6 +54,7 @@
             display: flex;
             gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -64,6 +66,18 @@
 
         .nav-links a:hover {
             color: var(--terracotta);
+        }
+
+        .nav-email {
+            background: var(--terracotta);
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .nav-email:hover {
+            background: #A84D2F;
         }
 
         /* Hero Section */
@@ -84,10 +98,27 @@
             font-size: 1.2rem;
             color: var(--ocean);
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 1.5rem;
         }
 
-        /* 系列标签 */
+        .hero-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+        }
+
+        .hero-contact a {
+            color: var(--terracotta);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Collection Tabs */
         .collection-tabs {
             display: flex;
             justify-content: center;
@@ -113,7 +144,7 @@
             color: white;
         }
 
-        /* 产品网格 */
+        /* Products Grid */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -147,10 +178,6 @@
             font-size: 4rem;
             position: relative;
             overflow: hidden;
-        }
-
-        .product-image::before {
-            content: attr(data-emoji);
         }
 
         .product-badge {
@@ -220,6 +247,10 @@
             transition: all 0.3s;
             text-align: center;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
 
         .btn-primary {
@@ -242,7 +273,20 @@
             color: white;
         }
 
-        /* 详情页模态框 */
+        .btn-inquiry {
+            background: linear-gradient(135deg, var(--terracotta), #E76F51);
+            color: white;
+            font-size: 1rem;
+            padding: 1rem;
+            box-shadow: 0 4px 15px rgba(198, 93, 59, 0.3);
+        }
+
+        .btn-inquiry:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(198, 93, 59, 0.4);
+        }
+
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -383,7 +427,121 @@
             color: var(--terracotta);
         }
 
-        /* 响应式 */
+        /* Contact Section */
+        .contact-section {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 4rem 5%;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-email-box {
+            background: rgba(255,255,255,0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: 2px solid var(--terracotta);
+            transition: all 0.3s;
+        }
+
+        .contact-email-box:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+
+        .contact-email-box a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-method {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--terracotta);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .contact-method span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Floating Inquiry Button */
+        .floating-inquiry {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--terracotta);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(198, 93, 59, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .floating-inquiry:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(198, 93, 59, 0.6);
+            background: #A84D2F;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: var(--sand);
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .modal-body {
                 grid-template-columns: 1fr;
@@ -394,59 +552,74 @@
             .hero h1 {
                 font-size: 2rem;
             }
+            .nav-links {
+                display: none;
+            }
+            .floating-inquiry {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- 导航 -->
+    <!-- Navigation -->
     <nav>
         <div class="logo">SOUK</div>
         <ul class="nav-links">
-            <li><a href="#collections">系列</a></li>
-            <li><a href="#about">品牌故事</a></li>
-            <li><a href="#contact">联系</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:303136997@qq.com?subject=SOUK Product Inquiry&body=Hello, I am interested in SOUK grip socks. Please provide more information:%0D%0A%0D%0A1. Product Model:%0D%0A2. Quantity Needed:%0D%0A3. Target Market:%0D%0A4. Other Requirements:" class="nav-email">📧 Inquiry</a></li>
         </ul>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
         <h1>Where Tradition Meets Movement</h1>
         <p>Authentic Moroccan patterns meet modern Pilates performance. Non-slip grip socks inspired by centuries of artisan craft.</p>
+        <div class="hero-contact">
+            <span>📧</span>
+            <a href="mailto:303136997@qq.com?subject=SOUK Product Inquiry&body=Hello, I am interested in SOUK grip socks. Please provide more information:%0D%0A%0D%0A1. Product Model:%0D%0A2. Quantity Needed:%0D%0A3. Target Market:%0D%0A4. Other Requirements:">303136997@qq.com</a>
+        </div>
     </section>
 
-    <!-- 系列标签 -->
+    <!-- Collection Tabs -->
     <div class="collection-tabs">
-        <button class="tab-btn active" onclick="filterCollection('all')">全部系列</button>
+        <button class="tab-btn active" onclick="filterCollection('all')">All Collections</button>
         <button class="tab-btn" onclick="filterCollection('zellige')">Zellige Collection</button>
         <button class="tab-btn" onclick="filterCollection('medina')">Medina Collection</button>
         <button class="tab-btn" onclick="filterCollection('limited')">Limited Edition</button>
     </div>
 
-    <!-- 产品网格 -->
+    <!-- Products Grid -->
     <div class="products-grid" id="productsGrid">
-        
-        <!-- Zellige Collection - Desert Tones（现有） -->
+
+        <!-- Zellige Collection - Desert Tones -->
         <div class="product-card" data-collection="zellige" onclick="openModal('desert')">
             <div class="product-image" data-emoji="🧦">
-                <span class="product-badge">畅销</span>
+                <span class="product-badge">Bestseller</span>
             </div>
             <div class="product-info">
                 <div class="product-series">Zellige Collection</div>
                 <h3 class="product-name">Desert Tones</h3>
                 <div class="product-price">$18.00</div>
                 <div class="product-features">
-                    <span class="feature-tag">有机棉</span>
-                    <span class="feature-tag">硅胶防滑</span>
-                    <span class="feature-tag">足弓支撑</span>
+                    <span class="feature-tag">Organic Cotton</span>
+                    <span class="feature-tag">Silicone Grip</span>
+                    <span class="feature-tag">Arch Support</span>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary">查看详情</button>
+                    <button class="btn btn-primary">View Details</button>
+                    <a href="mailto:303136997@qq.com?subject=Inquiry: Desert Tones&body=Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Desert Tones%0D%0ACollection: Zellige Collection%0D%0APrice: $18.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:" class="btn btn-secondary">📧 Inquiry</a>
                 </div>
             </div>
         </div>
 
-        <!-- Zellige Collection - Ocean Blue（新增） -->
+        <!-- Zellige Collection - Ocean Blue -->
         <div class="product-card" data-collection="zellige" onclick="openModal('ocean')">
             <div class="product-image" data-emoji="🌊" style="background: linear-gradient(45deg, #E8F4F8, #B8D4E3);">
             </div>
@@ -455,37 +628,39 @@
                 <h3 class="product-name">Ocean Blue</h3>
                 <div class="product-price">$18.00</div>
                 <div class="product-features">
-                    <span class="feature-tag">海洋灵感</span>
-                    <span class="feature-tag">透气网眼</span>
-                    <span class="feature-tag">快干面料</span>
+                    <span class="feature-tag">Ocean Inspired</span>
+                    <span class="feature-tag">Breathable Mesh</span>
+                    <span class="feature-tag">Quick Dry</span>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary">查看详情</button>
+                    <button class="btn btn-primary">View Details</button>
+                    <a href="mailto:303136997@qq.com?subject=Inquiry: Ocean Blue&body=Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Ocean Blue%0D%0ACollection: Zellige Collection%0D%0APrice: $18.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:" class="btn btn-secondary">📧 Inquiry</a>
                 </div>
             </div>
         </div>
 
-        <!-- Zellige Collection - Terracotta Sunset（新增） -->
+        <!-- Zellige Collection - Terracotta Sunset -->
         <div class="product-card" data-collection="zellige" onclick="openModal('terracotta')">
             <div class="product-image" data-emoji="🌅" style="background: linear-gradient(45deg, #F4A261, #E76F51);">
-                <span class="product-badge">新品</span>
+                <span class="product-badge">New Arrival</span>
             </div>
             <div class="product-info">
                 <div class="product-series">Zellige Collection</div>
                 <h3 class="product-name">Terracotta Sunset</h3>
                 <div class="product-price">$20.00</div>
                 <div class="product-features">
-                    <span class="feature-tag">日落渐变</span>
-                    <span class="feature-tag">加厚缓冲</span>
-                    <span class="feature-tag">限量色</span>
+                    <span class="feature-tag">Sunset Gradient</span>
+                    <span class="feature-tag">Extra Cushion</span>
+                    <span class="feature-tag">Limited Color</span>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary">查看详情</button>
+                    <button class="btn btn-primary">View Details</button>
+                    <a href="mailto:303136997@qq.com?subject=Inquiry: Terracotta Sunset&body=Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Terracotta Sunset%0D%0ACollection: Zellige Collection%0D%0APrice: $20.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:" class="btn btn-secondary">📧 Inquiry</a>
                 </div>
             </div>
         </div>
 
-        <!-- Zellige Collection - Midnight Marrakech（新增） -->
+        <!-- Zellige Collection - Midnight Marrakech -->
         <div class="product-card" data-collection="zellige" onclick="openModal('midnight')">
             <div class="product-image" data-emoji="🌙" style="background: linear-gradient(45deg, #2C3E50, #34495E);">
             </div>
@@ -494,78 +669,82 @@
                 <h3 class="product-name">Midnight Marrakech</h3>
                 <div class="product-price">$18.00</div>
                 <div class="product-features">
-                    <span class="feature-tag">深色调</span>
-                    <span class="feature-tag">耐脏</span>
-                    <span class="feature-tag">夜间反光</span>
+                    <span class="feature-tag">Dark Tones</span>
+                    <span class="feature-tag">Stain Resistant</span>
+                    <span class="feature-tag">Reflective Strip</span>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary">查看详情</button>
+                    <button class="btn btn-primary">View Details</button>
+                    <a href="mailto:303136997@qq.com?subject=Inquiry: Midnight Marrakech&body=Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Midnight Marrakech%0D%0ACollection: Zellige Collection%0D%0APrice: $18.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:" class="btn btn-secondary">📧 Inquiry</a>
                 </div>
             </div>
         </div>
 
-        <!-- Medina Collection - Souk Spice（新系列） -->
+        <!-- Medina Collection - Souk Spice -->
         <div class="product-card" data-collection="medina" onclick="openModal('spice')">
             <div class="product-image" data-emoji="🌶️" style="background: linear-gradient(45deg, #D4A574, #C65D3B);">
-                <span class="product-badge">新系列</span>
+                <span class="product-badge">New Collection</span>
             </div>
             <div class="product-info">
                 <div class="product-series">Medina Collection</div>
                 <h3 class="product-name">Souk Spice</h3>
                 <div class="product-price">$22.00</div>
                 <div class="product-features">
-                    <span class="feature-tag">香料市场</span>
-                    <span class="feature-tag">抗菌面料</span>
-                    <span class="feature-tag">奢华系列</span>
+                    <span class="feature-tag">Spice Market</span>
+                    <span class="feature-tag">Antibacterial</span>
+                    <span class="feature-tag">Luxury Series</span>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary">查看详情</button>
+                    <button class="btn btn-primary">View Details</button>
+                    <a href="mailto:303136997@qq.com?subject=Inquiry: Souk Spice&body=Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Souk Spice%0D%0ACollection: Medina Collection%0D%0APrice: $22.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:" class="btn btn-secondary">📧 Inquiry</a>
                 </div>
             </div>
         </div>
 
-        <!-- Medina Collection - Atlas Mountain（新系列） -->
+        <!-- Medina Collection - Atlas Mountain -->
         <div class="product-card" data-collection="medina" onclick="openModal('atlas')">
-            <div class="product-image" data-emoji">⛰️" style="background: linear-gradient(45deg, #A8B5A0, #8B9D83);">
+            <div class="product-image" data-emoji="⛰️" style="background: linear-gradient(45deg, #A8B5A0, #8B9D83);">
             </div>
             <div class="product-info">
                 <div class="product-series">Medina Collection</div>
                 <h3 class="product-name">Atlas Mountain</h3>
                 <div class="product-price">$22.00</div>
                 <div class="product-features">
-                    <span class="feature-tag">山脉灵感</span>
-                    <span class="feature-tag">保暖内里</span>
-                    <span class="feature-tag">冬季款</span>
+                    <span class="feature-tag">Mountain Inspired</span>
+                    <span class="feature-tag">Thermal Lining</span>
+                    <span class="feature-tag">Winter Edition</span>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary">查看详情</button>
+                    <button class="btn btn-primary">View Details</button>
+                    <a href="mailto:303136997@qq.com?subject=Inquiry: Atlas Mountain&body=Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Atlas Mountain%0D%0ACollection: Medina Collection%0D%0APrice: $22.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:" class="btn btn-secondary">📧 Inquiry</a>
                 </div>
             </div>
         </div>
 
-        <!-- Limited Edition - Artisan Collaboration（限量） -->
+        <!-- Limited Edition - Artisan Collaboration -->
         <div class="product-card" data-collection="limited" onclick="openModal('artisan')">
             <div class="product-image" data-emoji="✨" style="background: linear-gradient(45deg, #F9F1F0, #E6B8B8, #D4A5A5);">
-                <span class="product-badge">限量 50双</span>
+                <span class="product-badge">Limited 50 Pairs</span>
             </div>
             <div class="product-info">
                 <div class="product-series">Limited Edition</div>
                 <h3 class="product-name">Artisan Collaboration</h3>
                 <div class="product-price">$35.00</div>
                 <div class="product-features">
-                    <span class="feature-tag">手工刺绣</span>
-                    <span class="feature-tag">编号证书</span>
-                    <span class="feature-tag">艺术家联名</span>
+                    <span class="feature-tag">Hand Embroidered</span>
+                    <span class="feature-tag">Certificate</span>
+                    <span class="feature-tag">Artist Collab</span>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary">查看详情</button>
+                    <button class="btn btn-primary">View Details</button>
+                    <a href="mailto:303136997@qq.com?subject=Inquiry: Artisan Collaboration (Limited Edition)&body=Hello, I am interested in the following limited edition product:%0D%0A%0D%0AProduct: Artisan Collaboration%0D%0ACollection: Limited Edition%0D%0APrice: $35.00%0D%0ALimited: 50 pairs only%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:" class="btn btn-secondary">📧 Inquiry</a>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <!-- 产品详情模态框 -->
+    <!-- Product Detail Modal -->
     <div class="modal" id="productModal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal()">×</button>
@@ -575,11 +754,11 @@
                     <div class="product-series" id="modalSeries">Zellige Collection</div>
                     <h2 id="modalName">Desert Tones</h2>
                     <div class="product-price" id="modalPrice">$18.00</div>
-                    
-                    <p id="modalDesc">灵感来自马拉喀什传统瓷砖工艺的几何图案，讲述着古老 Medina 的故事。</p>
-                    
+
+                    <p id="modalDesc">Inspired by traditional Moroccan zellige tilework geometry, telling stories of ancient Marrakech medinas.</p>
+
                     <div style="margin: 1.5rem 0;">
-                        <strong>选择颜色：</strong>
+                        <strong>Select Color:</strong>
                         <div class="color-options" id="colorOptions">
                             <div class="color-option active" style="background: #C65D3B;" title="Terracotta"></div>
                             <div class="color-option" style="background: #2E5C6E;" title="Ocean"></div>
@@ -588,7 +767,7 @@
                     </div>
 
                     <div style="margin: 1.5rem 0;">
-                        <strong>选择尺码：</strong>
+                        <strong>Select Size:</strong>
                         <div class="size-selector">
                             <button class="size-btn">S</button>
                             <button class="size-btn active">M</button>
@@ -596,39 +775,76 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">
-                        咨询购买
-                    </button>
+                    <a href="mailto:303136997@qq.com" class="btn btn-inquiry" id="modalInquiryBtn" style="width: 100%;">
+                        📧 Send Inquiry
+                    </a>
 
                     <div class="detail-section">
-                        <h3>产品特点</h3>
+                        <h3>Product Features</h3>
                         <ul class="specs-list" id="modalSpecs">
-                            <li>优质有机棉混纺面料</li>
-                            <li>战略性硅胶防滑图案</li>
-                            <li>足弓压缩支撑设计</li>
-                            <li>加固脚趾和后跟</li>
-                            <li>均码适合 US 6-10</li>
+                            <li>Premium organic cotton blend fabric</li>
+                            <li>Strategic silicone grip pattern</li>
+                            <li>Arch compression support design</li>
+                            <li>Reinforced toe and heel</li>
+                            <li>One size fits most (US 6-10)</li>
                         </ul>
                     </div>
 
                     <div class="detail-section">
-                        <h3>护理说明</h3>
-                        <p>冷水机洗，低温烘干。为保持防滑性能，建议翻面洗涤。</p>
+                        <h3>Care Instructions</h3>
+                        <p>Machine wash cold, tumble dry low. Turn inside out to maintain grip performance.</p>
                     </div>
 
                     <div class="detail-section">
-                        <h3>配送信息</h3>
-                        <p>✓ 3双以上免费 shipping<br>
-                        ✓ 14天无理由退换<br>
-                        ✓ 全球配送</p>
+                        <h3>Shipping Information</h3>
+                        <p>✓ Free shipping on 3+ pairs<br>
+                        ✓ 14-day hassle-free returns<br>
+                        ✓ Worldwide delivery</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Ready to Connect?</h2>
+        <p>Wholesale Orders · Custom Partnerships · Brand Distribution<br>We look forward to collaborating with you</p>
+
+        <div class="contact-email-box">
+            <span>📧</span>
+            <a href="mailto:303136997@qq.com?subject=SOUK Business Partnership Inquiry&body=Hello, I am interested in partnering with SOUK:%0D%0A%0D%0APartnership Type: □ Wholesale / □ Distribution / □ Custom / □ Other%0D%0ACompany Name:%0D%0AContact Person:%0D%0APhone Number:%0D%0AInquiry Details:">303136997@qq.com</a>
+        </div>
+
+        <div class="contact-methods">
+            <div class="contact-method">
+                <div class="contact-icon">📧</div>
+                <span>Email Inquiry</span>
+            </div>
+            <div class="contact-method">
+                <div class="contact-icon">🌐</div>
+                <span>Global Shipping</span>
+            </div>
+            <div class="contact-method">
+                <div class="contact-icon">🤝</div>
+                <span>Custom Partnership</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 SOUK Grip Socks. All rights reserved.</p>
+        <p>Business Contact: <a href="mailto:303136997@qq.com">303136997@qq.com</a></p>
+    </footer>
+
+    <!-- Floating Inquiry Button -->
+    <a href="mailto:303136997@qq.com?subject=SOUK Quick Product Inquiry&body=Hello, I am interested in SOUK products. Please contact me soon." class="floating-inquiry">
+        📧 Inquiry Now
+    </a>
+
     <script>
-        // 产品数据
+        // Product Data
         const products = {
             desert: {
                 series: 'Zellige Collection',
@@ -636,8 +852,10 @@
                 price: '$18.00',
                 emoji: '🧦',
                 bg: 'linear-gradient(45deg, #E6D5C3, #F5F1E8)',
-                desc: '灵感来自马拉喀什传统瓷砖工艺的几何图案，讲述着古老 Medina 的故事。温暖的大地色调，适合日常练习。',
-                specs: ['优质有机棉混纺面料', '战略性硅胶防滑图案', '足弓压缩支撑设计', '加固脚趾和后跟', '均码适合 US 6-10']
+                desc: 'Inspired by traditional Moroccan zellige tilework geometry, telling stories of ancient Marrakech medinas. Warm earth tones perfect for daily practice.',
+                specs: ['Premium organic cotton blend fabric', 'Strategic silicone grip pattern', 'Arch compression support design', 'Reinforced toe and heel', 'One size fits most (US 6-10)'],
+                inquirySubject: 'Inquiry: Desert Tones',
+                inquiryBody: 'Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Desert Tones%0D%0ACollection: Zellige Collection%0D%0APrice: $18.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:'
             },
             ocean: {
                 series: 'Zellige Collection',
@@ -645,8 +863,10 @@
                 price: '$18.00',
                 emoji: '🌊',
                 bg: 'linear-gradient(45deg, #E8F4F8, #B8D4E3)',
-                desc: '大西洋海岸的清新灵感。采用透气网眼设计，高温瑜伽课程的理想选择。',
-                specs: ['海洋蓝渐变色调', '透气网眼编织', '快干吸湿面料', '加强透气区域', '适合热瑜伽']
+                desc: 'Fresh inspiration from the Atlantic coast. Breathable mesh design makes it ideal for hot yoga sessions.',
+                specs: ['Ocean blue gradient tones', 'Breathable mesh knitting', 'Quick-dry moisture-wicking fabric', 'Enhanced ventilation zones', 'Perfect for hot yoga'],
+                inquirySubject: 'Inquiry: Ocean Blue',
+                inquiryBody: 'Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Ocean Blue%0D%0ACollection: Zellige Collection%0D%0APrice: $18.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:'
             },
             terracotta: {
                 series: 'Zellige Collection',
@@ -654,8 +874,10 @@
                 price: '$20.00',
                 emoji: '🌅',
                 bg: 'linear-gradient(45deg, #F4A261, #E76F51)',
-                desc: '捕捉撒哈拉日落的壮丽色彩。加厚缓冲底，为长时间练习提供额外舒适。',
-                specs: ['日落渐变配色', '加厚缓冲鞋底', '限量季节色', '额外后跟保护', '收藏级包装']
+                desc: 'Capturing the magnificent colors of Sahara sunsets. Extra-thick cushioned sole provides added comfort for extended practice.',
+                specs: ['Sunset gradient colorway', 'Thick cushioned sole', 'Limited seasonal color', 'Extra heel protection', 'Collector's edition packaging'],
+                inquirySubject: 'Inquiry: Terracotta Sunset',
+                inquiryBody: 'Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Terracotta Sunset%0D%0ACollection: Zellige Collection%0D%0APrice: $20.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:'
             },
             midnight: {
                 series: 'Zellige Collection',
@@ -663,8 +885,10 @@
                 price: '$18.00',
                 emoji: '🌙',
                 bg: 'linear-gradient(45deg, #2C3E50, #34495E)',
-                desc: '深夜 Medina 的神秘魅力。深色调耐脏实用，夜间反光条增加安全性。',
-                specs: ['深靛蓝色调', '耐脏实用设计', '夜间反光条', '低调优雅风格', '适合晚间课程']
+                desc: 'The mysterious charm of late-night Medina. Dark tones are practical and stain-resistant, with reflective strips for added safety.',
+                specs: ['Deep indigo blue tones', 'Stain-resistant practical design', 'Nighttime reflective strips', 'Understated elegant style', 'Perfect for evening classes'],
+                inquirySubject: 'Inquiry: Midnight Marrakech',
+                inquiryBody: 'Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Midnight Marrakech%0D%0ACollection: Zellige Collection%0D%0APrice: $18.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:'
             },
             spice: {
                 series: 'Medina Collection',
@@ -672,8 +896,10 @@
                 price: '$22.00',
                 emoji: '🌶️',
                 bg: 'linear-gradient(45deg, #D4A574, #C65D3B)',
-                desc: '走进香料市场的温暖怀抱。奢华系列采用抗菌银离子面料，高端体验。',
-                specs: ['摩洛哥香料灵感', '抗菌银离子面料', '奢华加厚材质', '手工编织细节', '礼盒包装']
+                desc: 'Step into the warm embrace of the spice market. Luxury series features antibacterial silver-ion fabric for a premium experience.',
+                specs: ['Moroccan spice inspiration', 'Antibacterial silver-ion fabric', 'Luxury thick material', 'Hand-woven details', 'Gift box packaging'],
+                inquirySubject: 'Inquiry: Souk Spice',
+                inquiryBody: 'Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Souk Spice%0D%0ACollection: Medina Collection%0D%0APrice: $22.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:'
             },
             atlas: {
                 series: 'Medina Collection',
@@ -681,8 +907,10 @@
                 price: '$22.00',
                 emoji: '⛰️',
                 bg: 'linear-gradient(45deg, #A8B5A0, #8B9D83)',
-                desc: '阿特拉斯山脉的清新空气。保暖内里设计，冬季练习的完美伴侣。',
-                specs: ['山脉绿色调', '保暖抓绒内里', '冬季专用款', '防滑升级', '温度调节']
+                desc: 'The fresh air of the Atlas Mountains. Thermal lining design makes it the perfect companion for winter practice.',
+                specs: ['Mountain green tones', 'Thermal fleece lining', 'Winter special edition', 'Enhanced grip', 'Temperature regulating'],
+                inquirySubject: 'Inquiry: Atlas Mountain',
+                inquiryBody: 'Hello, I am interested in the following product:%0D%0A%0D%0AProduct: Atlas Mountain%0D%0ACollection: Medina Collection%0D%0APrice: $22.00%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:'
             },
             artisan: {
                 series: 'Limited Edition',
@@ -690,12 +918,14 @@
                 price: '$35.00',
                 emoji: '✨',
                 bg: 'linear-gradient(45deg, #F9F1F0, #E6B8B8, #D4A5A5)',
-                desc: '与摩洛哥当地工匠的独家合作。每双都有独立编号和手工刺绣细节，附收藏证书。',
-                specs: ['手工刺绣细节', '独立编号证书', '艺术家签名', '限定 50 双', '丝绸内衬', '木质礼盒']
+                desc: 'Exclusive collaboration with local Moroccan artisans. Each pair features unique numbering and hand-embroidered details, with a certificate of authenticity.',
+                specs: ['Hand-embroidered details', 'Unique numbered certificate', 'Artist signature', 'Limited to 50 pairs only', 'Silk lining', 'Wooden gift box'],
+                inquirySubject: 'Inquiry: Artisan Collaboration (Limited Edition)',
+                inquiryBody: 'Hello, I am interested in the following limited edition product:%0D%0A%0D%0AProduct: Artisan Collaboration%0D%0ACollection: Limited Edition%0D%0APrice: $35.00%0D%0ALimited: 50 pairs only%0D%0A%0D%0AQuantity Needed:%0D%0ATarget Market:%0D%0AExpected Delivery:'
             }
         };
 
-        // 打开模态框
+        // Open Modal
         function openModal(productId) {
             const product = products[productId];
             document.getElementById('modalSeries').textContent = product.series;
@@ -704,43 +934,45 @@
             document.getElementById('modalDesc').textContent = product.desc;
             document.getElementById('modalImage').textContent = product.emoji;
             document.getElementById('modalImage').style.background = product.bg;
-            
+
             const specsList = document.getElementById('modalSpecs');
             specsList.innerHTML = product.specs.map(spec => `<li>${spec}</li>`).join('');
-            
+
+            // Update inquiry button link
+            const inquiryBtn = document.getElementById('modalInquiryBtn');
+            inquiryBtn.href = `mailto:303136997@qq.com?subject=${encodeURIComponent(product.inquirySubject)}&body=${product.inquiryBody}`;
+
             document.getElementById('productModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
-        // 关闭模态框
+        // Close Modal
         function closeModal() {
             document.getElementById('productModal').classList.remove('active');
             document.body.style.overflow = 'auto';
         }
 
-        // 点击模态框外部关闭
+        // Click outside to close
         document.getElementById('productModal').addEventListener('click', function(e) {
             if (e.target === this) closeModal();
         });
 
-        // ESC 键关闭
+        // ESC key to close
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeModal();
         });
 
-        // 系列筛选
+        // Filter Collection
         function filterCollection(collection) {
-            // 更新按钮状态
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active');
-                if (btn.textContent.includes(collection === 'all' ? '全部' : 
+                if (btn.textContent.includes(collection === 'all' ? 'All' : 
                     collection === 'zellige' ? 'Zellige' : 
                     collection === 'medina' ? 'Medina' : 'Limited')) {
                     btn.classList.add('active');
                 }
             });
 
-            // 筛选产品
             const cards = document.querySelectorAll('.product-card');
             cards.forEach(card => {
                 if (collection === 'all' || card.dataset.collection === collection) {
@@ -751,7 +983,7 @@
             });
         }
 
-        // 颜色选择交互
+        // Color selection
         document.querySelectorAll('.color-option').forEach(option => {
             option.addEventListener('click', function() {
                 document.querySelectorAll('.color-option').forEach(o => o.classList.remove('active'));
@@ -759,7 +991,7 @@
             });
         });
 
-        // 尺码选择交互
+        // Size selection
         document.querySelectorAll('.size-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
